@@ -14,7 +14,9 @@ import { BasicosComponent } from './basicos/basicos.component';
     BasicosComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule
+  ],
+  exports: [
     TemplateRoutingModule
   ]
 })
