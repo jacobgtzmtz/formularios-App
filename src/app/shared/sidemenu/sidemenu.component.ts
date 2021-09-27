@@ -8,7 +8,10 @@ interface IMenuItem {
 @Component({
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
-  styles: [],
+  styles: [`
+  li {
+    cursor: pointer
+  }`],
 })
 export class SidemenuComponent {
   menusList: IMenuItem[] = [
