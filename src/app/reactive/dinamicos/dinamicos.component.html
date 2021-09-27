@@ -1,1 +1,80 @@
-<p>dinamicos works!</p>
+<h2>Reactivos <small>Dinámicos</small></h2>
+<hr />
+<form autocomplete="off">
+  <!--Nombre persona-->
+  <div class="row mb-3">
+    <div class="col col-sm-3">
+      <label class="col-form-label">Nombre</label>
+    </div>
+    <div class="col col-sm-9">
+      <input
+        class="form-control"
+        placeholder="Introduce el nombre"
+        type="text"
+      />
+      <label
+        class="form-text text-danger"
+        >Este campo es obligatorio</label
+      >
+    </div>
+  </div>
+
+  <!--Agregar-->
+  <div class="row mb-3">
+    <div class="col col-sm-3">
+      <label class="col-form-label">Libro</label>
+    </div>
+    <div class="col col-sm-9">
+      <div class="input-group">
+        <!-- <input class="form-control" placeholder="Agregar" type="text" #favorito />
+        <button class="btn btn-outline-primary"  type="button" (click) = "agregar({'id': persona.favoritos.length + 1, 'nombre': favorito.value  })">
+          Agregar favorito
+        </button> -->
+        <input class="form-control" placeholder="Agregar favorito..." type="text"/>
+        <button class="btn btn-outline-primary"  type="button" >
+          Agregar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--Favoritos-->
+  <div class="row mb-3">
+    <div class="col col-sm-3">
+      <label class="col-form-label">Favoritos</label>
+    </div>
+    <div class="col col-sm-9">
+      <div class="input-group">
+        <input type="text" class="form-control" />
+        <button class="btn btn-outline-danger" type="button" >Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button
+        class="btn btn-primary float-end"
+        type="button"
+      >
+        Guardar
+      </button>
+    </div>
+  </div>
+</form>
+
+<!--
+<div class="row">
+  <span>Formulario status</span>
+  <pre>
+    {{ miFormulario?.invalid | json }}
+  </pre>
+</div>
+
+<div class="row">
+  <span>Datos persona</span>
+  <pre>
+    {{ persona | json }}
+  </pre>
+</div> -->
+
