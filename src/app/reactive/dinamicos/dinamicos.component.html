@@ -48,7 +48,7 @@
       <!-- <div class="input-group" *ngFor="let favorito of miFormulario.controls['favoritos'].value; let i = index"> -->
         <div class="input-group" *ngFor="let favorito of favoritosArr.controls; let i = index">
         <input type="text" class="form-control" [formControlName]="i" />
-        <button class="btn btn-outline-danger" type="button" >Eliminar</button>
+        <button class="btn btn-outline-danger" type="button" (click)="eliminar(i)">Eliminar</button>
       </div>
     </div>
   </div>

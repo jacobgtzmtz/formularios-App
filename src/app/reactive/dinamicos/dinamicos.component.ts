@@ -19,7 +19,10 @@ export class DinamicosComponent implements OnInit {
   public miFormulario: FormGroup = this.$fb.group({
     nombre: [, [Validators.required, Validators.minLength(3)]],
     favoritos: this.$fb.array(
-      [['Juventud en extasis', Validators.required], ['Un grito desesperado', Validators.required]],
+      [
+        ['Juventud en extasis', Validators.required],
+        ['Un grito desesperado', Validators.required],
+      ],
       Validators.required
     ),
   });
@@ -42,7 +45,9 @@ export class DinamicosComponent implements OnInit {
     // this.favoritosArr.push(new FormControl(this.nuevoLibro.value, Validators.required));
 
     //Esta es la manera de hacerlo con formbuilder
-    this.favoritosArr.push(this.$fb.control(this.nuevoLibro.value, Validators.required));
+    this.favoritosArr.push(
+      this.$fb.control(this.nuevoLibro.value, Validators.required)
+    );
     this.nuevoLibro.reset();
   }
 
@@ -55,6 +60,17 @@ export class DinamicosComponent implements OnInit {
       this.miFormulario.controls[campo].touched
     );
   }
+
+  /**
+   * eliminar
+   */
+  public eliminar(index: number) {
+    //Esta linea funciona
+    // this.favoritosArr.controls.splice(index, 1);
+    //Esta esta mejor optimizada
+    this.favoritosArr.removeAt(index);
+  }
+
   /**
    * guardar
    */
